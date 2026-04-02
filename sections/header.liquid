@@ -2,7 +2,7 @@
   <div class="container-fluid">
 
 
-    <a class="navbar-brand" href="{{ routes.root_url }}"> </a> {% if settings.logo != blank  %}
+    <a class="navbar-brand" href="{{ routes.root_url }}">logo brand</a> {% if settings.logo != blank  %}
 <image src="{{ settings.logo | image_url: width: auto, height: auto }}">
     {% else %} {{ shop.name }}
       
@@ -14,6 +14,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
+
+-{%- for link in linklists.main-menu.link -%}
+  {{ link.title }}
+{%- endfor -%}
+
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
