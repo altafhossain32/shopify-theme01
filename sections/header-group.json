@@ -11,12 +11,10 @@
   "type": "header",
   "name": "t:general.header",
   "sections": {
-    "header": {
+    "Header": {
       "type": "header",
       "settings": {}
     }
   },
-  "order": [
-    "header"
-  ],
+  "order": ["Header"]
 }

@@ -19,18 +19,25 @@
 
     {% # Load and preload the critical CSS %}
     {{ 'critical.css' | asset_url | stylesheet_tag: preload: true }}
-
+{{ 'bootstrap.css' | asset_url | stylesheet_tag: preload: true }}
     {% # Social, title, etc. %}
     {% render 'meta-tags' %}
 
     {{ content_for_header }}
   </head>
 
-  <body>
+  <body id="{{ page_title | handleize }}">
+
+    
     {% sections 'header-group' %}
 
     {{ content_for_layout }}
 
     {% sections 'footer-group' %}
+
+
+
+    | <script src="{{ 'poper.js' | asset_url }}" defer="defer"></script>
+    | <script src="{{ 'bootstarap.min.js' | asset_url }}" defer="defer"></script>
   </body>
 </html>
