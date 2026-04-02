@@ -1,0 +1,9 @@
+.main_menu {
+}
+
+.item {
+  width: 40px;
+  display: block-inline;
+  list-style-type: none;
+  text-decoration: none;
+}
