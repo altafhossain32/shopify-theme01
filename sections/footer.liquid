@@ -1,57 +1,61 @@
-<footer>
-  <div class="footer__copyright">
-    &copy;
-    {{ 'now' | date: '%Y' }}
-    {{ shop.name | link_to: routes.root_url }}, {{ powered_by_link }}
+{{ 'footer.css' | asset_url | stylesheet_tag: preload: true }}
+
+
+<div class="main__footer_wrapper">
+
+  <div class="footer1"> 
+      <p>Shopify themes are a package of template files, building blocks, and supporting assets. Use these building blocks to create modular, customizable themes.</p>
+</div>
+
+
+  <div class="footer2"> 
+      <h3> Quick link</h3>
+      <p class="link_item">Home</p> 
+      <p class="link_item">About</p> 
+      <p class="link_item">Contact</p> 
+      <p class="link_item">Search</p> 
   </div>
 
-  <div class="footer__links">
-    {% for link in section.settings.menu.links %}
-      {{ link.title | link_to: link.url }}
-    {% endfor %}
+  <div class="footer2"> 
+      <h3> Quick link</h3>
+      <p class="link_item">Home</p> 
+      <p class="link_item">About</p> 
+      <p class="link_item">Contact</p> 
+      <p class="link_item">Search</p> 
   </div>
 
-  <div class="footer__payment">
-    {% if section.settings.show_payment_icons %}
-      {% for type in shop.enabled_payment_types %}
-        {{ type | payment_type_svg_tag }}
-      {% endfor %}
-    {% endif %}
+  <div class="footer2"> 
+    <h3> Quick link</h3>
+    <p class="link_item">Home</p> 
+    <p class="link_item">About</p> 
+    <p class="link_item">Contact</p> 
+    <p class="link_item">Search</p> 
   </div>
-</footer>
 
-{% stylesheet %}
-  footer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-  }
-  footer a {
-    text-decoration: none;
-    color: var(--color-foreground);
-  }
-  footer .footer__links,
-  footer .footer__payment {
-    display: flex;
-    gap: 1rem;
-  }
-{% endstylesheet %}
+</div>
+
+<div ><p class="copy_right"> © openmizer Ltd. 2026</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 {% schema %}
-{
-  "name": "t:general.footer",
-  "settings": [
-    {
-      "type": "link_list",
-      "id": "menu",
-      "label": "t:labels.menu"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_payment_icons",
-      "label": "t:labels.show_payment_icons",
-      "default": true
-    }
-  ]
-}
+  {
+    "name": "footer",
+    "class": "footer",
+    "settings": [
+    
+    ]
+  }
 {% endschema %}
