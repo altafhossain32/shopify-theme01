@@ -1,9 +1,45 @@
-.main_menu {
+.header {
+  display: flex;
+  padding: 15px;
+  background: rgb(239, 236, 231);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header_left {
+  padding-left: 30px;
+  display: inline;
+}
+
+.header_middle {
+  display: flex;
+  justify-content: end;
+}
+
+.middle-wrapper {
+  display: flex;
+  text-decoration: none;
+  list-style-type: none;
 }
 
 .item {
-  width: 40px;
-  display: block-inline;
-  list-style-type: none;
+  padding: 10px;
   text-decoration: none;
+}
+
+ul > li > a {
+  text-decoration: none;
+}
+.Header_right_wrapper {
+}
+.Header_right {
+  display: flex;
+  text-decoration: none;
+  justify-content:;
+  list-style-type: none;
+}
+
+.Header_right_wrapper {
+  display: flex;
+  justify-content: end;
 }

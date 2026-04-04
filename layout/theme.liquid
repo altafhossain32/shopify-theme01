@@ -18,7 +18,7 @@
     {% endunless %}
 
     {% # Load and preload the critical CSS %}
-    {{ 'critical.css' | asset_url | stylesheet_tag: preload: true }}
+    {% comment %} {{ 'critical.css' | asset_url | stylesheet_tag: preload: true }} {% endcomment %}
 {{ 'bootstrap.css' | asset_url | stylesheet_tag: preload: true }}
     {% # Social, title, etc. %}
     {% render 'meta-tags' %}
